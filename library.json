@@ -1,0 +1,21 @@
+{
+  "name": "bitHelpers",
+  "keywords": "reverse, swap, rotate, left, right, bitRot",
+  "description": "Arduino library with functions on bit level",
+  "authors":
+  [
+    {
+      "name": "Rob Tillaart",
+      "email": "Rob.Tillaart@gmail.com",
+      "maintainer": true
+    }
+  ],
+  "repository":
+  {
+    "type": "git",
+    "url": "https://github.com/RobTillaart/bitHelpers.git"
+  },
+  "version":"0.1.0",
+  "frameworks": "*",
+  "platforms": "*"
+}
