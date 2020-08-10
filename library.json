@@ -1,6 +1,6 @@
 {
   "name": "bitHelpers",
-  "keywords": "reverse, swap, rotate, left, right, bitRot",
+  "keywords": "bitCount, reverse, swap, rotate, left, right, bitRot, bitSet64, bitClr64, bitToggle64, bitsNeeded",
   "description": "Arduino library with functions on bit level",
   "authors":
   [
@@ -15,7 +15,7 @@
     "type": "git",
     "url": "https://github.com/RobTillaart/bitHelpers.git"
   },
-  "version":"0.1.0",
+  "version":"0.1.1",
   "frameworks": "*",
   "platforms": "*"
 }
