@@ -18,5 +18,14 @@ bitRotateRight	KEYWORD2
 bitFlip	KEYWORD2
 bitRot	KEYWORD2
 
+bitSet64	KEYWORD2
+bitClear64	KEYWORD2
+bitToggle64	KEYWORD2
+bitRead64	KEYWORD2
+bitWrite64	KEYWORD2
+
+bitsNeededRef	KEYWORD2
+bitsNeeded	KEYWORD2
+
 # Constants (LITERAL1)
 
