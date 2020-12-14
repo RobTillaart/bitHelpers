@@ -1,3 +1,9 @@
+
+[![Arduino CI](https://github.com/RobTillaart/bitHelpers/workflows/Arduino%20CI/badge.svg)](https://github.com/marketplace/actions/arduino_ci)
+[![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/RobTillaart/bitHelpers/blob/master/LICENSE)
+[![GitHub release](https://img.shields.io/github/release/RobTillaart/bitHelpers.svg?maxAge=3600)](https://github.com/RobTillaart/bitHelpers/releases)
+
+
 # bitHelpers
 
 Arduino library with functions on bit level
@@ -70,6 +76,10 @@ Also added are macro versions of these five functions.
 - **mbitToggle64(x, bit)** toggle bit of uint64_t
 - **mbitWrite64(x, bit, value)** set bit of uint64_t to 0 or 1
 - **mbitRead64(x, bit)** reads bit from uint64_t 
+
+### 0.1.2 added
+
+Added arduino-ci and unit tests
 
 
 ## Future

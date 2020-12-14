@@ -2,14 +2,15 @@
 //
 //    FILE: bitHelpers.h
 //  AUTHOR: Rob Tillaart
-// VERSION: 0.1.1
+// VERSION: 0.1.2
 //    DATE: 2015-11-07
 // PURPOSE: Arduino library with functions on bit level
 //     URL: https://github.com/RobTillaart/bitHelpers
 //
-// 0.0.1    2015-11-07 initial version
-// 0.1.0    2020-07-29 intial release
-// 0.1.1    2020-08-10 added BitsNeeded, bitSet64 family
+// 0.0.1    2015-11-07  initial version
+// 0.1.0    2020-07-29  intial release
+// 0.1.1    2020-08-10  added BitsNeeded, bitSet64 family
+// 0.1.2    2020-12-14  add Adruino-ci + unit tests 
 
 #include "Arduino.h"
 
