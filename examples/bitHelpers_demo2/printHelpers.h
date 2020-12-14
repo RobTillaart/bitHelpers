@@ -252,6 +252,8 @@ void sci(Stream &str, double f, uint8_t digits)
 // 
 // To have some support the code uses lowercase for the next 8 levels
 // treda sorta rinta quexa pepta ocha nena minga luma (1024 ^21 ~~ 10^63)
+
+/*
 char * toBytes(double val, uint8_t decimals = 2)
 {
   static char buf[12];
@@ -283,6 +285,7 @@ char * toBytes(double val, uint8_t decimals = 2)
   }
   return buf;
 }
+*/
 
 
 // -- END OF FILE --
