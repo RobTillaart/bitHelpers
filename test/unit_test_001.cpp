@@ -94,7 +94,7 @@ unittest(test_bitsNeeded)
   assertEqual(6 , bitsNeeded((uint8_t)0x34));
   assertEqual(11, bitsNeeded((uint16_t)0x0412));
   assertEqual(32, bitsNeeded((uint32_t)0xF0001234));
-  assertEqual(49, bitsNeeded((uint64_t)0x0001DEF01234567));
+  assertEqual(49, bitsNeeded((uint64_t)0x0001DEF012345677));
 }
 
 
