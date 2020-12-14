@@ -47,7 +47,7 @@ unittest(test_bitReverse)
   assertEqual(0xAA, bitReverse((uint8_t)0x55));
   assertEqual(0xFF00, bitReverse((uint16_t)0x00FF));
   assertEqual(0xFFFFAAAA, bitReverse((uint32_t)0x5555FFFF));
-  assertEqual(0xFFFFAAAAFFFFAAAA, bitReverse((uint64_t)0x5555FFFF0x5555FFFF));
+  assertEqual(0xFFFFAAAAFFFFAAAA, bitReverse((uint64_t)0x5555FFFF5555FFFF));
 }
 
 unittest(test_nybbleReverse)
