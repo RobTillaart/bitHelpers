@@ -1,6 +1,6 @@
 #pragma once
 //
-//    FILE: bithelper.h
+//    FILE: bitHelpers.h
 //  AUTHOR: Rob Tillaart
 // VERSION: 0.1.1
 //    DATE: 2015-11-07
