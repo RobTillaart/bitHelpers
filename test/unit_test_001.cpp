@@ -78,7 +78,7 @@ unittest(test_bitRotateLeft)
   assertEqual(0x8A, bitRotateLeft((uint8_t)0x51, 3));
   assertEqual(0x4682, bitRotateLeft((uint16_t)0x3412, 13));
   assertEqual(0x1A2B3C09, bitRotateLeft((uint32_t)0x56781234, 23));
-  assertEqual(0x1A2B3C4D5E6F7809, bitRotateLeft((uint64_t)0x89ABCDEF01234567, 43));
+  assertEqual(0x456789ABCDEF0123, bitRotateLeft((uint64_t)0x89ABCDEF01234567, 48));
 }
 
 unittest(test_bitRotateRight)
