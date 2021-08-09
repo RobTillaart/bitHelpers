@@ -75,26 +75,26 @@ unittest(test_swap)
 
 unittest(test_bitRotateLeft)
 {
-  assertEqual(0x01, bitRotateLeft((uint8_t)0x51, 3));
-  assertEqual(0x01, bitRotateLeft((uint16_t)0x3412, 13));
-  assertEqual(0x01, bitRotateLeft((uint32_t)0x56781234, 23));
-  assertEqual(0x01, bitRotateLeft((uint64_t)0x89ABCDEF01234567, 43));
+  assertEqual(0x88, bitRotateLeft((uint8_t)0x51, 3));
+  assertEqual(0x073A, bitRotateLeft((uint16_t)0x3412, 13));
+  assertEqual(0x1A263C09, bitRotateLeft((uint32_t)0x56781234, 23));
+  assertEqual(0x1A2B3C4D5E6F7809, bitRotateLeft((uint64_t)0x89ABCDEF01234567, 43));
 }
 
 unittest(test_bitRotateRight)
 {
-  assertEqual(0x01, bitRotateRight((uint8_t)0x51, 3));
-  assertEqual(0x01, bitRotateRight((uint16_t)0x3412, 13));
-  assertEqual(0x01, bitRotateRight((uint32_t)0x56781234, 23));
-  assertEqual(0x01, bitRotateRight((uint64_t)0x89ABCDEF01234567, 43));
+  assertEqual(0x0A, bitRotateRight((uint8_t)0x51, 3));
+  assertEqual(0xA091, bitRotateRight((uint16_t)0x3412, 13));
+  assertEqual(0xF02468AC, bitRotateRight((uint32_t)0x56781234, 23));
+  assertEqual(0x0123456789ABCDEF, bitRotateRight((uint64_t)0x89ABCDEF01234567, 32));
 }
 
 unittest(test_bitFlip)
 {
-  assertEqual(0x01, bitFlip((uint8_t)0x51, 3));
-  assertEqual(0x01, bitFlip((uint16_t)0x3412, 13));
-  assertEqual(0x01, bitFlip((uint32_t)0x56781234, 23));
-  assertEqual(0x01, bitFlip((uint64_t)0x89ABCDEF01234567, 43));
+  assertEqual(0x59, bitFlip((uint8_t)0x51, 3));
+  assertEqual(0x1412, bitFlip((uint16_t)0x3412, 13));
+  assertEqual(0x56F81234, bitFlip((uint32_t)0x56781234, 23));
+  assertEqual(0x0x89ABCBEF01234567, bitFlip((uint64_t)0x89ABCDEF01234567, 43));
 }
 
 unittest(test_bitsNeeded)
