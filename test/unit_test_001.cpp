@@ -94,7 +94,7 @@ unittest(test_bitFlip)
   assertEqual(0x59, bitFlip((uint8_t)0x51, 3));
   assertEqual(0x1412, bitFlip((uint16_t)0x3412, 13));
   assertEqual(0x56F81234, bitFlip((uint32_t)0x56781234, 23));
-  assertEqual(0x0x89ABCBEF01234567, bitFlip((uint64_t)0x89ABCDEF01234567, 43));
+  assertEqual(0x89ABCBEF01234567, bitFlip((uint64_t)0x89ABCDEF01234567, 43));
 }
 
 unittest(test_bitsNeeded)
