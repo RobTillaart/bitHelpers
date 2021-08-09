@@ -75,17 +75,26 @@ unittest(test_swap)
 
 unittest(test_bitRotateLeft)
 {
-  // TODO
+  assertEqual(0x01, bitRotateLeft((uint8_t)0x51, 3)
+  assertEqual(0x01, bitRotateLeft((uint16_t)0x3412, 13)
+  assertEqual(0x01, bitRotateLeft((uint32_t)0x56781234, 23)
+  assertEqual(0x01, bitRotateLeft((uint64_t)0x89ABCDEF01234567, 43)
 }
 
 unittest(test_bitRotateRight)
 {
-  // TODO
+  assertEqual(0x01, bitRotateRight((uint8_t)0x51, 3)
+  assertEqual(0x01, bitRotateRight((uint16_t)0x3412, 13)
+  assertEqual(0x01, bitRotateRight((uint32_t)0x56781234, 23)
+  assertEqual(0x01, bitRotateRight((uint64_t)0x89ABCDEF01234567, 43)
 }
 
 unittest(test_bitFlip)
 {
-  // TODO
+  assertEqual(0x01, bitFlip((uint8_t)0x51, 3)
+  assertEqual(0x01, bitFlip((uint16_t)0x3412, 13)
+  assertEqual(0x01, bitFlip((uint32_t)0x56781234, 23)
+  assertEqual(0x01, bitFlip((uint64_t)0x89ABCDEF01234567, 43)
 }
 
 unittest(test_bitsNeeded)
