@@ -46,8 +46,8 @@ void test_24_bit()
   Serial.println(z, HEX);
   Serial.println();
 
-  printHex(y);
-  printHex(z);
+  printHex32(y);
+  printHex32(z);
   Serial.println();
 
   x = 0x5D9504;

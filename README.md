@@ -115,7 +115,7 @@ Added Arduino-CI and unit tests
 
 ### 0.1.5
 
-- update library.json
+- update library.json, minor edits
 
 
 ## BitReverse n bit number
