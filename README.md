@@ -96,26 +96,9 @@ Also added are macro versions of these five functions.
 - **mbitRead64(x, bit)** reads bit from uint64_t 
 
 
-### 0.1.2 added
+### 0.1.2 and beyond
 
-Added Arduino-CI and unit tests
-
-
-### 0.1.3 added
-
-- update readme.md
-- update unit tests
-
-
-### 0.1.4
-
-- update build-CI (e.g. ESP32 compilation of tests)
-- update readme.md with badges
-
-
-### 0.1.5
-
-- update library.json, minor edits
+See CHANGELOG.md
 
 
 ## BitReverse n bit number
@@ -149,7 +132,12 @@ specific position. e.g.
 - many more :)
 - add **bitReverse(uint32_t x, uint8_t n)**
 - add **byteReverse24(uint32_t x)** dedicated 24 bit = 3 bytes e.g RGB
-- add **byteInverse(uint32_t x)**  (a,b,c,d) => (255-a, 255-b, 255-c, 255-d)
+- add **byteInverse(uint32_t x)**  (a,b,c,d) => (255-a, 255-b, 255-c, 255-d) = rather simple ~?
+- **bitRotateLeftRight()** should it do modulo pos?
+- **bitRotateLeftRight()** should it handle (pos == 0) separately
+- **isBitPalindrome()** byte, word ...
+- **bitRot()** one random + mod might be faster (dependency? bad?)
+- **bitsNeededRef()** correct for value 0?
 - performance tests
 
 
