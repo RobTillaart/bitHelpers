@@ -120,25 +120,34 @@ Could be added in next release...
 ## Future
 
 - improve documentation
-- improve readability of code (val => value and pos => position)
+- improve readability of code
+- add performance tests
+
+
+#### Functions add
+
 - besides **bitRot()** one can also have timing issues when clocking in bits. 
 A function could be created to mimic such timing error, by shifting bits from a 
 specific position. e.g. 
-- parShiftLeft(00001010, 4) ==> 00011010
-- bitBurst(00000000, 3) ==>  00111000 any group of 3 bits will toggle.
-- bitRot(value, chance = 50%, times = 1) extension...
-- bitNoggle(value, bit) - toggle all but one bit. (why?)
-- bitSort(value) ==> 00101001 ==> 00000111
-- many more :)
-- add **bitReverse(uint32_t x, uint8_t n)**
-- add **byteReverse24(uint32_t x)** dedicated 24 bit = 3 bytes e.g RGB
-- add **byteInverse(uint32_t x)**  (a,b,c,d) => (255-a, 255-b, 255-c, 255-d) = rather simple ~?
+- **parShiftLeft(00001010, 3)** ==> 00011010
+- **bitBurst(00000000, 3)** ==>  00111000 any group of 3 bits will toggle. edges?
+- **bitNoggle(value, bit)** - toggle all but one bit. (why?)
+- **bitSort(value)** 00101001 ==> 00000111
+or with minimal # toggles?
+- **bitReverse(uint32_t x, uint8_t n)**
+- **byteReverse24(uint32_t x)** dedicated 24 bit = 3 bytes e.g RGB
+- **byteInverse(uint32_t x)**  (a,b,c,d) => (255-a, 255-b, 255-c, 255-d) = rather simple ~?
+- **isBitPalindrome()** byte, word ...
+- **bitSwap(value, p, q)**
+
+
+#### Functions fix
+
 - **bitRotateLeftRight()** should it do modulo pos?
 - **bitRotateLeftRight()** should it handle (pos == 0) separately
-- **isBitPalindrome()** byte, word ...
-- **bitRot()** one random + mod might be faster (dependency? bad?)
 - **bitsNeededRef()** correct for value 0?
-- performance tests
+- **bitRot(value, chance = 50%, times = 1)** extension...
+- **bitRot()** one random + mod might be faster (dependency? bad?)
 
 
 ## Operations

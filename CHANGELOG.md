@@ -14,6 +14,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Changed
 - better masking in **bitCount()**
 - added () in several places.
+- edit README.md
 
 ### Fixed
 - Issue #10 Incorrect behaviour in bitWrite64 for value 31
@@ -31,13 +32,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Changed 
 - update build-CI (e.g. ESP32 compilation of tests)
-- update readme.md with badges
+- update README.md with badges
 
 
 ## [0.1.3] - 2021-08-09
 
 ### Changed
-- update readme.md
+- update README.md
 - update unit tests
 
 
