@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Added
 - add CHANGELOG.md
+- add experimental **bitRotFast()** to replace **bitRot()** in a next release
 
 ### Changed
 - better masking in **bitCount()**

@@ -14,7 +14,10 @@
 #include "Arduino.h"
 
 #define BITHELPER_LIB_VERSION         (F("0.1.6"))
-#define BH_BIG_NR                     (1000000000)
+
+//  used by bitRot()
+//  power of 2 gives better uniform distribution in the last bits
+#define BH_BIG_NR                     (1073741824)
 
 
 ////////////////////////////////////////////////
@@ -42,7 +45,7 @@ uint8_t bitCountKR(uint32_t value)
   while (v)
   {
     count++;
-    v &= (v -1);
+    v &= (v - 1);
   }
   return count;
 };
@@ -121,7 +124,7 @@ uint8_t bitCount(uint32_t value)
   v = (v & 0x33333333) + ((v >> 2) & 0x33333333);
   v = (v + (v >> 4)) & 0x0F0F0F0F;
   v =  v + (v >> 8);
-  v = (v + (v >> 16))& 0x3F;
+  v = (v + (v >> 16)) & 0x3F;
   return v;
 };
 
@@ -438,6 +441,45 @@ uint64_t bitRot(uint64_t value, float chance = 0.5)
   if (random(BH_BIG_NR) > chance * BH_BIG_NR) return value;
   return value ^ (1ULL << random(64));
 }
+
+
+//
+//  EXPERIMENTAL
+//  - will replace bitRot() in next release.
+//  - might need to adapt BH_BIG_NR to a power of 2
+//
+uint8_t bitRotFast(uint8_t value, float chance = 0.5)
+{
+  uint32_t r = random(BH_BIG_NR);
+  if ( r > chance * BH_BIG_NR) return value;
+  return value ^ (1 << (r & 7));
+}
+
+
+uint16_t bitRotFast(uint16_t value, float chance = 0.5)
+{
+  uint32_t r = random(BH_BIG_NR);
+  if ( r > chance * BH_BIG_NR) return value;
+  return value ^ (1UL << (r & 15));
+}
+
+
+uint32_t bitRotFast(uint32_t value, float chance = 0.5)
+{
+  uint32_t r = random(BH_BIG_NR);
+  if ( r > chance * BH_BIG_NR) return value;
+  return value ^ (1UL << (r & 31));
+}
+
+
+uint64_t bitRotFast(uint64_t value, float chance = 0.5)
+{
+  uint32_t r = random(BH_BIG_NR);
+  if ( r > chance * BH_BIG_NR) return value;
+  return value ^ (1ULL << (r & 63));
+}
+
+
 
 
 ////////////////////////////////////////////////////
