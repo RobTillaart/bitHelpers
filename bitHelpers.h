@@ -448,35 +448,59 @@ uint64_t bitRot(uint64_t value, float chance = 0.5)
 //  - will replace bitRot() in next release.
 //  - might need to adapt BH_BIG_NR to a power of 2
 //
-uint8_t bitRotFast(uint8_t value, float chance = 0.5)
+uint8_t bitRotFast(uint8_t value, float chance = 0.5, uint16_t times = 1)
 {
-  uint32_t r = random(BH_BIG_NR);
-  if ( r > chance * BH_BIG_NR) return value;
-  return value ^ (1 << (r & 7));
+  while(times--)
+  {
+    uint32_t r = random(BH_BIG_NR);
+    if ( r < chance * BH_BIG_NR)
+    {
+      value ^= (1 << (r & 7));
+    }
+  }
+  return value;
 }
 
 
-uint16_t bitRotFast(uint16_t value, float chance = 0.5)
+uint16_t bitRotFast(uint16_t value, float chance = 0.5, uint16_t times = 1)
 {
-  uint32_t r = random(BH_BIG_NR);
-  if ( r > chance * BH_BIG_NR) return value;
-  return value ^ (1UL << (r & 15));
+  while(times--)
+  {
+    uint32_t r = random(BH_BIG_NR);
+    if ( r < chance * BH_BIG_NR)
+    {
+      value ^= (1 << (r & 15));
+    }
+  }
+  return value;
 }
 
 
-uint32_t bitRotFast(uint32_t value, float chance = 0.5)
+uint32_t bitRotFast(uint32_t value, float chance = 0.5, uint16_t times = 1)
 {
-  uint32_t r = random(BH_BIG_NR);
-  if ( r > chance * BH_BIG_NR) return value;
-  return value ^ (1UL << (r & 31));
+  while(times--)
+  {
+    uint32_t r = random(BH_BIG_NR);
+    if ( r < chance * BH_BIG_NR)
+    {
+      value ^= (1 << (r & 31));
+    }
+  }
+  return value;
 }
 
 
-uint64_t bitRotFast(uint64_t value, float chance = 0.5)
+uint64_t bitRotFast(uint64_t value, float chance = 0.5, uint16_t times = 1)
 {
-  uint32_t r = random(BH_BIG_NR);
-  if ( r > chance * BH_BIG_NR) return value;
-  return value ^ (1ULL << (r & 63));
+  while(times--)
+  {
+    uint32_t r = random(BH_BIG_NR);
+    if ( r < chance * BH_BIG_NR)
+    {
+      value ^= (1 << (r & 63));
+    }
+  }
+  return value;
 }
 
 

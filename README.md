@@ -101,20 +101,9 @@ Also added are macro versions of these five functions.
 See CHANGELOG.md
 
 
-## BitReverse n bit number
+## Operations
 
-Trick to reverse a number of n bits  ( 0 < n < 32 ).
-Could also be done similar with 64 bit and or byte / nibble reverse.
-
-not as fast as a dedicated version.
-```cpp
-uint32_t bitReverse(uint32_t x, uint8_t n)
-{
-  uint32_t r = bitReverse(x);
-  return r >> (32 - n);
-}
-```
-Could be added in next release...
+See examples.
 
 
 ## Future
@@ -150,6 +139,31 @@ or with minimal # toggles?
 - **bitRot()** one random + mod might be faster (dependency? bad?)
 
 
-## Operations
+#### BitReverse n bit number
 
-See examples.
+Trick to reverse a number of n bits  ( 0 < n < 32 ).
+Could also be done similar with 64 bit and or byte / nibble reverse.
+
+not as fast as a dedicated version.
+```cpp
+uint32_t bitReverse(uint32_t x, uint8_t n)
+{
+  uint32_t r = bitReverse(x);
+  return r >> (32 - n);
+}
+```
+Could be added in next release...
+
+Q: what to do with the first (32-n) bits?
+Just reverse the last 24 bits and clear bit 24-31 is different than
+reversing the last 24 bits and keel bit 24-31 as is.
+```cpp
+uint32_t bitReverse(uint32_t x, uint8_t n)
+{
+  uint32_t y = (x >> n) << n;
+  uint32_t r = bitReverse(x);
+  r >>= (32 - n);
+  return y | r;
+}
+```
+
