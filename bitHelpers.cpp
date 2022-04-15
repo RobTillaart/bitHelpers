@@ -415,35 +415,35 @@ uint64_t bitFlip(uint64_t value, uint8_t pos)
 //
 // BIT ROT
 //
-uint8_t bitRotRef(uint8_t value, float chance = 0.5)
+uint8_t bitRotRef(uint8_t value, float chance)
 {
   if (random(BH_BIG_NR) > chance * BH_BIG_NR) return value;
   return value ^ (1 << random(8));
 }
 
 
-uint16_t bitRotRef(uint16_t value, float chance = 0.5)
+uint16_t bitRotRef(uint16_t value, float chance)
 {
   if (random(BH_BIG_NR) > chance * BH_BIG_NR) return value;
   return value ^ (1UL << random(16));
 }
 
 
-uint32_t bitRotRef(uint32_t value, float chance = 0.5)
+uint32_t bitRotRef(uint32_t value, float chance)
 {
   if (random(BH_BIG_NR) > chance * BH_BIG_NR) return value;
   return value ^ (1UL << random(32));
 }
 
 
-uint64_t bitRotRef(uint64_t value, float chance = 0.5)
+uint64_t bitRotRef(uint64_t value, float chance)
 {
   if (random(BH_BIG_NR) > chance * BH_BIG_NR) return value;
   return value ^ (1ULL << random(64));
 }
 
 
-uint8_t bitRot(uint8_t value, float chance = 0.5, uint16_t times = 1)
+uint8_t bitRot(uint8_t value, float chance, uint16_t times)
 {
   while(times--)
   {
@@ -457,7 +457,7 @@ uint8_t bitRot(uint8_t value, float chance = 0.5, uint16_t times = 1)
 }
 
 
-uint16_t bitRot(uint16_t value, float chance = 0.5, uint16_t times = 1)
+uint16_t bitRot(uint16_t value, float chance, uint16_t times)
 {
   while(times--)
   {
@@ -471,7 +471,7 @@ uint16_t bitRot(uint16_t value, float chance = 0.5, uint16_t times = 1)
 };
 
 
-uint32_t bitRot(uint32_t value, float chance = 0.5, uint16_t times = 1)
+uint32_t bitRot(uint32_t value, float chance, uint16_t times)
 {
   while(times--)
   {
@@ -485,7 +485,7 @@ uint32_t bitRot(uint32_t value, float chance = 0.5, uint16_t times = 1)
 };
 
 
-uint64_t bitRot(uint64_t value, float chance = 0.5, uint16_t times = 1)
+uint64_t bitRot(uint64_t value, float chance, uint16_t times)
 {
   while(times--)
   {
