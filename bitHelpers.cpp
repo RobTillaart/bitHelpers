@@ -1,4 +1,3 @@
-#pragma once
 //
 //    FILE: bitHelpers.cpp
 //  AUTHOR: Rob Tillaart
