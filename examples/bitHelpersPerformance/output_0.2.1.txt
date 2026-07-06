@@ -1,0 +1,112 @@
+BOARD:    UNO R3
+IDE:      1.8.19
+
+
+bitHelpersPerformance.ino
+BITHELPER_LIB_VERSION: 0.2.1
+
+
+test_bitCount1_32_bits_variations
+32	27.480	bitCountReference
+32	39.552	bitCountKR
+32	34.836	bitCountArray
+32	6.920	bitCountF1
+32	11.132	bitCountF2
+
+
+test_bitCount2
+8	1.448	bitCount 8 bit
+16	3.712	bitCount 16 bit
+32	7.168	bitCount 32 bit
+64	33.200	bitCount 64 bit
+
+
+test_bitReverse
+E8
+17
+ACE8
+1735
+1E6A2C48
+12345678
+    X:	12345678
+ Time:	11.196
+
+
+test_nybbleReverse
+71
+17
+5371
+1735
+87654321
+12345678
+    X:	12345678
+ Time:	5.720
+
+
+test_byteReverse
+3517
+1735
+78563412
+12345678
+    X:	12345678
+ Time:	1.392
+
+
+test_swap
+71
+17
+3517
+1735
+56781234
+12345678
+   X:	12345678
+ Time:	0.448
+
+
+test_bitFlip
+    X:	FFFFFFFF
+ Time:	7.901
+
+
+test_bitRotateLeft
+23456781
+34567812
+45678123
+56781234
+67812345
+78123456
+81234567
+12345678
+    X:	12345678
+ Time:	16.382
+
+
+test_bitRotateRight
+81234567
+78123456
+67812345
+56781234
+45678123
+34567812
+23456781
+12345678
+    X:	12345678
+ Time:	15.376
+
+
+test_bitRot
+12345678
+12345678
+12345678
+12345678
+1234567C
+1234577C
+1234577C
+1234577C
+    X:	FFFFFFFF
+    X:	FFFFBBFD
+ Time:	95.824
+
+
+Done...
+
