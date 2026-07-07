@@ -2,11 +2,6 @@ BOARD:    UNO R3
 IDE:      1.8.19
 
 
-D:\Rob\WORK\Arduin X:	FFFFFFFF
-    X:	FFFFBBFD
- Time:	96.320
-
-
 bitHelpersPerformance.ino
 BITHELPER_LIB_VERSION: 0.2.0
 
